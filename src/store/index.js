@@ -7,6 +7,9 @@ import Firebase from 'Firebase'
 import 'Firebase/firestore'
 import config from '../config'
 
+import users from './users'
+import conversations from './conversations'
+
 Firebase.initializeApp(config)
 
 Vue.use(Vuex)
@@ -16,5 +19,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state,
-  modules: {}
+  modules: {
+    users,
+    conversations
+  }
 })

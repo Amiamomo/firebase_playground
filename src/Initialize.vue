@@ -16,7 +16,8 @@
       },
 
       get () {
-        // todo
+        this.$store.dispatch('users/get')
+        this.$store.dispatch('conversations/get')
       }
     }
   }
